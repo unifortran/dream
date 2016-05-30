@@ -17,10 +17,8 @@ def main():
 
     handlers = [
         (r"/", IndexHandler),
-
         (r"/(.*html)", tornado.web.StaticFileHandler, {"path": "static"}),
         (r"/((js|css)/.*)", tornado.web.StaticFileHandler, {"path": "static"}),
-
     ]
 
     template_path = os.path.join(os.path.dirname(__file__), "template")
